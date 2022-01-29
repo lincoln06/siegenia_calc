@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "siegenia_calc", "siegenia_calc\siegenia_calc.csproj", "{98FD21C1-C13F-42AD-9146-D771647B0D62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98FD21C1-C13F-42AD-9146-D771647B0D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FD21C1-C13F-42AD-9146-D771647B0D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FD21C1-C13F-42AD-9146-D771647B0D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FD21C1-C13F-42AD-9146-D771647B0D62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B44C061F-3578-49C7-AF77-9DDAFB5F1DC9}
+	EndGlobalSection
+EndGlobal

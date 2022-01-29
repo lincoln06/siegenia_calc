@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qlBCTGa+I0ufFZfWyr7tCvRIRvLrBRf23V/ryMAwCBnA3x/xGKZHNW6l0cC0ogvIN4KNgWuODgsRvpeqLfOjnQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\macie\\source\\repos\\siegenia_calc\\siegenia_calc\\siegenia_calc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\macie\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

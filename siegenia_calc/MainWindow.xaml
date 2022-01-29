@@ -1,0 +1,82 @@
+﻿<Window x:Class="siegenia_calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:siegenia_calc"
+        mc:Ignorable="d"
+        Title="Kalkulator okuć SIEGENIA v1.00" Height="500" Width="800" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" Background="White" Icon="/icon.png">
+   
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Background="#f0f0f0">
+
+            <Menu>
+                <MenuItem Header="_Plik">
+                    <MenuItem x:Name="SaveFileButton" Header="_Zapisz" IsEnabled="false" Click="SaveFileButton_Click"/>
+                    <MenuItem x:Name="CloseButton" Header="Za_kończ" Click="CloseButton_Click"/>
+                </MenuItem>
+                <MenuItem Header="_O programie" x:Name="AboutButton" Click="AboutButton_Click"/>
+            </Menu>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20">
+                <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <Label Content="Klient"/>
+                    <ComboBox x:Name="CbKlient" Width="165" Margin="15,0,0,0"/>
+                    <Button x:Name="BtnAddClient" Content="+Nowy" Click="BtnAddClient_Click" Margin="10,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="StpAddClient" Visibility="Hidden">
+                    <Label Content="Nazwa klienta" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="TbKlient" Width="120" Margin="15,0,11,0" TextChanged="TbKlient_TextChanged"/>
+                    <Button x:Name="BtnAddNewClient" Margin="0,0,10,0" Content="Dodaj" Click="BtnAddNewClient_Click"/>
+                    <Button x:Name="BtnHideAddClient" Content="Ukryj" Click="BtnHideAddClient_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Numer zamówienia"/>
+                        <TextBox x:Name="TbZam" Width="105" TextChanged="TbZam_TextChanged" Margin="2,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Typ"/>
+                        <ComboBox x:Name="CbTyp" Width="155" RenderTransformOrigin="0.392,0.457" SelectionChanged="Cb_SelectionChanged" Margin="36,0">
+                            <ComboBoxItem Name="ru">Rozwierno-uchylne</ComboBoxItem>
+                            <ComboBoxItem Name="roz">Rozwierne</ComboBoxItem>
+                            <ComboBoxItem Name="uch">Uchylne</ComboBoxItem>
+                            <ComboBoxItem Name="sru">RU+R ze sł. ruchomym</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Klasa odporności na włamanie"/>
+                        <ComboBox x:Name="CbKlasa" Margin="10,0"  Width="75" SelectionChanged="Cb_SelectionChanged">
+                            <ComboBoxItem Name="standard">Standard</ComboBoxItem>
+                            <ComboBoxItem Name="rc2">RC2</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Wymiary skrzydła [mm]"/>
+                        <Label x:Name="Min" Margin="15,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Szerokość"/>
+                        <TextBox x:Name="TbSzer" Width="70" TextChanged="Tbx_TextChanged" Margin="5,0"/>
+                        <Label x:Name="LbSzer" Foreground="#2B2B2B" FontSize="10" Margin="5,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Label Content="Wysokość"/>
+                        <TextBox x:Name="TbWys" Width="70" TextChanged="Tbx_TextChanged" Margin="5,0"/>
+                        <Label x:Name="LbWys" Foreground="#2B2B2B" FontSize="10" Margin="5,0"/>
+                    </StackPanel>
+                    <Label x:Name="LbErr2" Content="    " Background="Transparent" FontSize="10" />
+                    <StackPanel Orientation="Horizontal" Margin="10,0">
+                        <Button x:Name="BtnOblicz" Content="Oblicz" Click="BtnOblicz_Click"/>
+                        <Button x:Name="BtnClear" Content="Wyczyść" Click="BtnClear_Click" Margin="15,0"/>
+                </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="70,0">
+                    <TextBox x:Name="TbOkucia" Text="Lista okuć" TextWrapping="Wrap" Width="400" Height="150" IsReadOnly="True" VerticalScrollBarVisibility="Auto" MaxWidth="400" MaxHeight="150" Foreground="DimGray" />
+                    <TextBox x:Name="TbProfil" Text="Lista profili" Margin="0,30"  TextWrapping="Wrap" Width="400" Height="150" IsReadOnly="True" VerticalScrollBarVisibility="Auto" MaxWidth="400" MaxHeight="150" Foreground="DimGray"/>
+                </StackPanel>
+            </StackPanel>
+        
+    </StackPanel>
+    
+</Window>
